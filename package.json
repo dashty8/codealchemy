@@ -1,0 +1,95 @@
+{
+  "name": "codealchemy",
+  "displayName": "CodeAlchemy",
+  "description": "AI-powered code generation and project scaffolding",
+  "version": "0.1.0",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "codealchemy.openChat",
+        "title": "CodeAlchemy: Open Chat"
+      },
+      {
+        "command": "codealchemy.showChatPanel",
+        "title": "CodeAlchemy: Show Chat Panel"
+      },
+      {
+        "command": "codealchemy.toggleVisualFeedback",
+        "title": "CodeAlchemy: Toggle Visual Feedback"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "codealchemy-sidebar",
+          "title": "CodeAlchemy",
+          "icon": "resources/codealchemy.svg"
+        }
+      ]
+    },
+    "views": {
+      "codealchemy-sidebar": [
+        {
+          "id": "codealchemy.chatView",
+          "name": "Chat"
+        }
+      ]
+    },
+    "keybindings": [
+      {
+        "command": "codealchemy.openChat",
+        "key": "ctrl+shift+c",
+        "mac": "cmd+shift+c"
+      }
+    ],
+    "configuration": {
+      "title": "CodeAlchemy",
+      "properties": {
+        "codealchemy.animation.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable visualization animations for file operations"
+        },
+        "codealchemy.animation.speed": {
+          "type": "string",
+          "enum": ["slow", "normal", "fast"],
+          "default": "normal",
+          "description": "Speed of visualization animations (slow: LLM-like typing, normal: medium speed, fast: quicker animations)"
+        },
+        "codealchemy.visualFeedback": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable visual feedback when creating, updating, or deleting files"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.1150.0",
+    "dotenv": "^16.0.1"
+  },
+  "devDependencies": {
+    "@types/glob": "^7.1.3",
+    "@types/mocha": "^8.2.2",
+    "@types/node": "14.x",
+    "@types/vscode": "^1.60.0",
+    "eslint": "^7.27.0",
+    "glob": "^7.1.7",
+    "mocha": "^8.4.0",
+    "typescript": "^4.3.2",
+    "vscode-test": "^1.5.2"
+  }
+}
