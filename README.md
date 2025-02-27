@@ -64,3 +64,31 @@ Many AI coding tools overwhelm you with features and complexity. CodeAlchemy is:
 - **Transparent**: See exactly what's changing in your files
 - **Lightweight**: Minimal impact on your development environment
 
+## 🗺️ Roadmap
+
+CodeAlchemy is just beginning its journey. Here's what's on the horizon:
+
+### 📅 Q2 2025: "The Artisan" Update
+- **Local LLM Support**: Run CodeAlchemy with local models, no cloud required
+- **Enhanced Animation**: More fluid typing animations with syntax-aware pauses
+- **Context Understanding**: Smarter code generation based on project structure
+
+### 📅 Q3 2025: "The Craftsman" Update
+- **Interactive Refactoring**: Guided, step-by-step code transformations
+- **Animation Themes**: Customize animation styles and behaviors
+- **Vibe Coding**: Speak to code :)
+
+### 📅 Q4 2025: "The Alchemist" Update
+- **Intelligent Test Generation**: Create tests for newly generated code
+- **Smart Animations**: Highlight logic flows and connections as code is written
+
+### 🌟 Long-term Vision
+- **No-dependency Mode**: Run without external AI services
+- **Code Evolution Playback**: Visualize how your codebase has evolved over time
+- **Pair Programming Simulation**: AI-assisted coding with natural conversation
+
+Each update will maintain CodeAlchemy's core values of simplicity, focus, and visual feedback.
+
+---
+
+💡 **Have ideas?** We'd love to hear how you're using CodeAlchemy and what would make it even better for your workflow. Open an issue or discussion to share your thoughts!
