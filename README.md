@@ -81,6 +81,7 @@ CodeAlchemy is just beginning its journey. Here's what's on the horizon:
 ### 📅 Q4 2025: "The Alchemist" Update
 - **Intelligent Test Generation**: Create tests for newly generated code
 - **Smart Animations**: Highlight logic flows and connections as code is written
+- **Preview and Accept Changes**: Preview changes to be made before applying them to whether accept or deny the proposed generated changes
 
 ### 🌟 Long-term Vision
 - **No-dependency Mode**: Run without external AI services
