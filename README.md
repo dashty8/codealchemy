@@ -13,7 +13,7 @@ In a world of bloated, complicated tools, CodeAlchemy takes a different approach
 
 ## See CodeAlchemy in Action
 
-[![CodeAlchemy Demo](media/thumbnail-image.png)](https://drive.google.com/file/d/1QtuELZ-BQvoVthzZmdTQxI5UBFmbsoyk/view "See CodeAlchemy in action")
+[![CodeAlchemy Demo](media/ezgif-4d614e3dbb843b.gif)](https://drive.google.com/file/d/1QtuELZ-BQvoVthzZmdTQxI5UBFmbsoyk/view "See CodeAlchemy in action")
 
 ## 🚀 Key Features
 
