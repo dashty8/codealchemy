@@ -2,7 +2,7 @@
 
 **CodeAlchemy** transforms natural language into code through a simple, intuitive interface in VS Code. Unlike other complex AI coding tools, CodeAlchemy focuses on simplicity and visual feedback.
 
-## ✨ Simplicity by Design
+## ✨ Extreme Simplicity by Design
 
 In a world of bloated, complicated tools, CodeAlchemy takes a different approach:
 
