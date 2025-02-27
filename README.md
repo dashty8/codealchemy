@@ -33,8 +33,10 @@ In a world of bloated, complicated tools, CodeAlchemy takes a different approach
 1. Clone this repository
 2. Run `npm install`
 3. Create a `.env` file with your AWS credentials:
-    AWS_ACCESS_KEY_ID=your_access_key
-    AWS_SECRET_ACCESS_KEY=your_secret_key
+    - AWS_ACCESS_KEY_ID=your_access_key
+    - AWS_SECRET_ACCESS_KEY=your_secret_key
+    - AWS_REGION=your_region
+    - AWS_BEDROCK_MODEL_ID=your_bedrock_model_arn
 4. Press F5 to run the extension in development mode
 
 ## 💻 Usage
