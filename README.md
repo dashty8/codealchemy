@@ -85,7 +85,7 @@ CodeAlchemy is just beginning its journey. Here's what's on the horizon:
 ### 🌟 Long-term Vision
 - **No-dependency Mode**: Run without external AI services
 - **Code Evolution Playback**: Visualize how your codebase has evolved over time
-- **Pair Programming Simulation**: AI-assisted coding with natural conversation
+- **Supporting Multiple IDEs**: Making this extension available for multiple IDEs rather than just VS Code
 
 Each update will maintain CodeAlchemy's core values of simplicity, focus, and visual feedback.
 
