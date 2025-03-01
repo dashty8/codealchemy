@@ -2,6 +2,11 @@ const AWS = require('aws-sdk');
 const vscode = require('vscode');
 const fs = require('fs');
 const path = require('path');
+
+
+const model_ARN = process.env.AWS_BEDROCK_MODEL_ID;
+
+
 /**
  * Determines the action to take based on user prompt
  * @param {string} userPrompt - The user's project description
@@ -16,6 +21,7 @@ async function determineAction(userPrompt) {
     if (!accessKey || !secretKey) {
       throw new Error('AWS credentials not found. Make sure AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY are defined in your .env file.');
     }
+    
 
     // Configure AWS SDK with the verified credentials
     AWS.config.update({
@@ -47,7 +53,7 @@ async function determineAction(userPrompt) {
     IMPORTANT: Your response must ONLY contain valid JSON with NO additional text, comments, or explanations.`;
 
     const params = {
-      modelId: 'arn:aws:bedrock:us-east-1:507504252679:inference-profile/us.anthropic.claude-3-5-sonnet-20241022-v2:0',
+      modelId: model_ARN,
       contentType: 'application/json',
       accept: 'application/json',
       body: JSON.stringify({
@@ -150,9 +156,8 @@ async function callBedrockLLM(userPrompt) {
     Be comprehensive and include all necessary files for the described project. For specific frameworks like React, 
     include appropriate configuration files, component structure, etc.`;
 
-    // For Claude models that support messages API but not system role
     const params = {
-      modelId: 'arn:aws:bedrock:us-east-1:507504252679:inference-profile/us.anthropic.claude-3-5-sonnet-20241022-v2:0',  // You might need to adjust this
+      modelId: model_ARN,
       contentType: 'application/json',
       accept: 'application/json',
       body: JSON.stringify({
@@ -371,7 +376,7 @@ async function callBedrockForUpdates(userPrompt, currentStructure) {
     const structureStr = JSON.stringify(currentStructure, null, 2);
 
     const params = {
-      modelId: 'arn:aws:bedrock:us-east-1:507504252679:inference-profile/us.anthropic.claude-3-5-sonnet-20241022-v2:0',
+      modelId: model_ARN,
       contentType: 'application/json',
       accept: 'application/json',
       body: JSON.stringify({
@@ -503,7 +508,7 @@ async function callBedrockForSearchAndModify(userPrompt, currentStructure) {
     const structureStr = JSON.stringify(currentStructure, null, 2);
 
     const params = {
-      modelId: 'arn:aws:bedrock:us-east-1:507504252679:inference-profile/us.anthropic.claude-3-5-sonnet-20241022-v2:0',
+      modelId: model_ARN,
       contentType: 'application/json',
       accept: 'application/json',
       body: JSON.stringify({
@@ -628,7 +633,7 @@ async function callBedrockForDeletes(userPrompt, currentStructure) {
     const structureStr = JSON.stringify(currentStructure, null, 2);
 
     const params = {
-      modelId: 'arn:aws:bedrock:us-east-1:507504252679:inference-profile/us.anthropic.claude-3-5-sonnet-20241022-v2:0',
+      modelId: model_ARN,
       contentType: 'application/json',
       accept: 'application/json',
       body: JSON.stringify({
