@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 
 
-const model_ARN = process.env.AWS_BEDROCK_MODEL_ID;
+
 
 
 /**
@@ -22,6 +22,7 @@ async function determineAction(userPrompt) {
       throw new Error('AWS credentials not found. Make sure AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY are defined in your .env file.');
     }
     
+    const model_ARN = process.env.AWS_BEDROCK_MODEL_ID;
 
     // Configure AWS SDK with the verified credentials
     AWS.config.update({
@@ -120,6 +121,8 @@ async function callBedrockLLM(userPrompt) {
     if (!accessKey || !secretKey) {
       throw new Error('AWS credentials not found. Make sure AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY are defined in your .env file.');
     }
+
+    const model_ARN = process.env.AWS_BEDROCK_MODEL_ID;
 
     // Configure AWS SDK with the verified credentials
     AWS.config.update({
@@ -256,6 +259,8 @@ async function getCurrentProjectStructure() {
       throw new Error("No workspace is open");
     }
 
+    const model_ARN = process.env.AWS_BEDROCK_MODEL_ID;
+
     // Use the first workspace folder
     const rootPath = workspaceFolders[0].uri.fsPath;
     
@@ -342,6 +347,8 @@ async function callBedrockForUpdates(userPrompt, currentStructure) {
     if (!accessKey || !secretKey) {
       throw new Error('AWS credentials not found. Make sure AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY are defined in your .env file.');
     }
+
+    const model_ARN = process.env.AWS_BEDROCK_MODEL_ID;
 
     // Configure AWS SDK with the verified credentials
     AWS.config.update({
@@ -468,6 +475,8 @@ async function callBedrockForSearchAndModify(userPrompt, currentStructure) {
     if (!accessKey || !secretKey) {
       throw new Error('AWS credentials not found. Make sure AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY are defined in your .env file.');
     }
+
+    const model_ARN = process.env.AWS_BEDROCK_MODEL_ID;
 
     // Configure AWS SDK with the verified credentials
     AWS.config.update({
@@ -600,6 +609,8 @@ async function callBedrockForDeletes(userPrompt, currentStructure) {
     if (!accessKey || !secretKey) {
       throw new Error('AWS credentials not found. Make sure AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY are defined in your .env file.');
     }
+
+    const model_ARN = process.env.AWS_BEDROCK_MODEL_ID;
 
     // Configure AWS SDK with the verified credentials
     AWS.config.update({
